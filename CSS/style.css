@@ -1,0 +1,497 @@
+*,::after,::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    background-color: #ffeae0;
+}
+
+
+/*====menu====*/
+.nav{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 0;
+}
+
+.nav .logo h1{
+    font-weight: 600;
+    font-family: sans-serif;
+    color: #070708;
+}
+
+.nav .logo b{
+    color: #ff511c;
+}
+
+.nav ul{
+    display: flex;
+    list-style: none;
+}
+
+.nav ul li{
+    margin-right: 30px;
+}
+
+.nav ul li a{
+    text-decoration: none;
+    color: #000000;
+    font-weight: 500;
+    font-size: 17px;
+}
+
+/*====active===*/
+.nav ul .active::after{
+    content: '';
+    width: 50%;
+    height: 3px;
+    background-color: #ff511c;
+    display: flex;
+    position: relative;
+    margin-left: 10px;
+}
+
+/*===input===*/
+input{
+    padding: 10px 20px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.signin{
+    background: transparent;
+    border: none;
+}
+
+.signup{
+    background: #ff511c;
+    color: #ffffff;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+}
+
+/*===content===*/
+.content{
+    display: flex;
+    grid-template-columns: 50% auto;
+    gap: 30px;
+    margin-top: 120px;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+/*#content text*/
+/*===left-side===*/
+.content .content-left{
+    display: block;
+    width: 100%;
+}
+
+.content .content-left .info{
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.content .content-left .info h2{
+    font-size: 60px;
+    font-family: sans-serif;
+    margin-bottom: 30px;
+}
+
+.content .content-left .info p{
+    font-size: 20px;
+    line-height: 2pc;
+    margin-bottom: 30px;
+    font-family: sans-serif;
+}
+
+/*==content==*/
+/*==button==*/
+.content .content-left button{
+    padding: 10px 23px;
+    background-color: #ff511c;
+    color: #ffffff;
+    border-radius: 5px;
+    cursor:pointer;
+}
+
+/*content img*/
+/*right-side*/
+.content .content-right{
+    display: flex;
+    width: 100%;
+}
+
+.content .content-right img{
+    width: 350px;
+    height: 350px;
+    border-radius: 200px;
+    position: relative;
+    user-select: none;
+    animation: rotate 10s linear infinite;
+}
+
+/*#content*/
+/*===animation===*/
+@keyframes rotate {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+/*cards*/
+.category{
+    width: 100%;
+    display: flex;
+    margin-bottom: 50px;
+    justify-content: center;
+}
+
+.category .list-items{
+    width: 90%;
+    position: relative;
+    margin-top: 100px;
+}
+
+.category .list-items h3{
+    font-size: 20px;
+    font-weight: 600;
+    font-family: sans-serif;
+    margin-bottom: 70px;
+}
+
+.category .list-items .card-list{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.category .card-list .card{
+    width: 200px;
+    height: auto;
+    display: block;
+    padding: 10px;
+    border-radius: 10px;
+    position: relative;
+    background: #ffffff;
+    outline: 2px solid #faad96;
+}
+
+.category .card-list .card img{
+    width: 100px;
+    height: 100px;
+    bottom: 140px;
+    left: 50px;
+    object-fit: cover;
+    object-position: center;
+    background-repeat: no-repeat;
+    position: absolute;
+    box-shadow: 0 20px 20px #faad96;
+    border-radius: 50%;
+}
+
+.category .card-list .card .coffee-title{
+    padding: 40px 0 10px ;
+}
+
+.category .card-list .card .coffee-title h1{
+    text-align: center;
+    font-weight: bold;
+    font-size: 16px;
+    font-family: sans-serif;
+}
+
+.category .card .drink-coffee p{
+    font-size: 13px;
+    text-align: center;
+    font-weight: 500;
+    margin-bottom: 10px;
+    font-family: sans-serif;
+}
+
+.category .card .price{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.category .card .price span{
+    font-weight: 600;
+    font-family: sans-serif;
+}
+
+.category .card .price .plus-icon{
+    color: #ff511c;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+/*food*/
+.food{
+    width: 100%;
+    display: flex;
+    margin-bottom: 50px;
+    justify-content: center;
+}
+
+.food .items{
+    width: 90%;
+    position: relative;
+    margin-top: 100px;
+}
+
+.food .items h3{
+    font-size: 20px;
+    font-weight: 600;
+    font-family: sans-serif;
+    margin-bottom: 70px;
+}
+
+.food .items .item{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.food .item .item1{
+    width: 200px;
+    height: auto;
+    display: block;
+    padding: 10px;
+    border-radius: 10px;
+    position: relative;
+    background: #ffffff;
+    outline: 2px solid #faad96;
+}
+
+.food .item .item1 img {
+    width: 100px;
+    height: 100px;
+    bottom: 170px;
+    left: 50px;
+    object-fit: cover;
+    object-position: center;
+    background-repeat: no-repeat;
+    position: absolute;
+    box-shadow: 0 20px 20px #faad96;
+    border-radius: 50%;
+}
+
+.food .item .item1 .cookies-sup{
+    padding: 40px 0 10px ;
+}
+
+.food .item .item1 .cookies-sup h1{
+    text-align: center;
+    font-weight: bold;
+    font-size: 16px;
+    font-family: sans-serif;
+}
+
+.food .item1 .cookies p{
+    font-size: 13px;
+    text-align: center;
+    font-weight: 500;
+    margin-bottom: 10px;
+    font-family: sans-serif;
+}
+
+.food .item1 .price1{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.food .item1 .price1 span{
+    font-weight: 600;
+    font-family: sans-serif;
+}
+
+.food .item1 .price1 .plus-icon{
+    color: #ff511c;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+/*sign up*/
+.wap{
+    width: 330px;
+    padding: 2rem 1rem;
+    margin: 50px auto;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 20px 35px rgba(0, 0, 0, 0.1);
+    background-color:#bda59e;
+}
+
+.wap h1{
+    font-size: 2rem;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-bottom: 1.2rem;
+}
+
+.wap form input{
+    width: 92%;
+    outline: none;
+    padding: 1px solid rgb(227, 224, 224);
+    padding: 10px 20px;
+    margin-bottom: 10px;
+    border-radius: 20px;
+    background: #ccd6d9;
+}
+
+.wap button{
+    font-size: 1rem;
+    margin-top:1.8rem;
+    padding: 10px 0;
+    border-radius: 15px;
+    outline: none;
+    border: none;
+    width: 90%;
+    cursor: pointer;
+    background: #ff511c;
+}
+
+.wap button:hover{
+    background: #faad96;
+}
+
+.wap input:focus{
+    border: 1px solid #569db3;
+}
+
+.terms{
+    margin-top: 0.2rem;
+}
+
+.terms input{
+    height: 1em;
+    width: 1em;
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+.terms label{
+    font-size: 0.7rem;
+}
+
+.terms a{
+    color: #545996e7;
+    text-decoration: none;
+}
+
+.member{
+    font-size: 0.8rem;
+    margin-top: 1.4rem;
+    color: #6f7375;
+
+}
+
+.member a{
+    color: #faad96;
+    text-decoration: none;
+}
+
+/* about*/
+.about{
+    display: grid;
+    grid-template-columns: repeat(2 2fr);
+    text-align: center;
+}
+
+.about-img img{
+    width: 350px;
+    height: 350px;
+    border-radius: 200px;
+    position: relative;
+    user-select: none;   
+    animation: rotate 10s linear infinite;
+
+}
+ .about-text span{
+    color: #faad96;
+    font-weight: 600;
+    text-align: center;
+    font-size: 16px;
+    font-family: sans-serif;
+    
+}
+   
+
+
+ .about-text h2{
+    font-size: 2px;
+    text-align: center;
+    font-family: sans-serif;
+}
+
+ .about-text a{
+    margin: 0.8rem;
+    line-height: 1.7;
+    background: #ff511c;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 15px;
+    font-family: sans-serif;   
+}
+
+/* services */
+.welcome{
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    padding-top: 10px;
+}
+
+.welcome h1{
+    padding-bottom: 7px;
+    color: #faad96;
+}
+
+.welcome p{
+    font-size: 17px;
+}
+
+.help {
+    text-align: center;
+    padding-top: 10px;
+}
+.help span{
+    color: #ff511c;
+    font-size: 20px;
+    padding: 0 5px 0 5px;
+}
+/* coutact Us*/
+.contact {
+    text-align: center;
+    padding: 1rem;
+}
+.contact h2{
+    color: #faad96;
+    padding-bottom: 10px;
+    font-size: 25px;
+}
+
+.contact p{
+    font-size: 20px;
+}
+
+.uss{
+    text-align: center;
+    font-size: 20px;
+    color: #ff511c;
+}
+.uss span{
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
